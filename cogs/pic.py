@@ -15,20 +15,20 @@ class PedoCog(commands.Cog):
     @commands.command(invoke_without_command=True,name="pedo gaming", aliases=['neko'])
     async def shibe(self,ctx):
        async with aiohttp.ClientSession() as session:
-           apicall = "https://yande.re/post.json?limit=1&tags=neko+order%3ARandom"
+           apicall = "https://danbooru.donmai.us/posts.json?limit=1&tags=neko&nsfw=none&random=true&rating%3A"
            response = requests.get(apicall)
            response = response.json()
        for r in response:
-          await ctx.send(r['file_url'],delete_after=10.0)
+          await ctx.send(r['file_url'])
     
     @commands.command(invoke_without_command=True,name="pedo", aliases=['kitsune'])
     async def h(self,ctx):
        async with aiohttp.ClientSession() as session:
-           apicall = "https://yande.re/post.json?limit=1&tags=kitsune+order%3ARandom"
+           apicall = "https://danbooru.donmai.us/posts.json?limit=1&tags=kitsune&nsfw=none&random=true&rating%3A"
            response = requests.get(apicall)
            response = response.json()
        for r in response:
-          await ctx.send(r['file_url'],delete_after=10.0)
+          await ctx.send(r['file_url'])
         
 
 

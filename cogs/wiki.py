@@ -13,7 +13,7 @@ class wikiCog(commands.Cog):
     @commands.command(invoke_without_command=True, aliases=['wiki','wk'])
     async def search(self,ctx,arg):
         definition = wikipedia.summary(arg,sentences=3,chars=1000)
-        embed = discord.Embed(title="***wiki:***",description=definition)
+        embed = discord.Embed(title="***wiki:***",description=definition,color = discord.Color.random())
         await ctx.send(embed=embed)
 
         
