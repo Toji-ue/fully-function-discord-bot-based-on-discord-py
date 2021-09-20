@@ -42,4 +42,4 @@ async def say(ctx, *, text):
     await message.delete()
     await ctx.send(f"{text}")
 
-bot.run('ODg3ODQ2OTIxNTc2NzkyMDk0.YUKF4Q.W8M4kPobMryd2NlwcrHTI8pNHe8', bot=True, reconnect=True)
+bot.run('token', bot=True, reconnect=True)
